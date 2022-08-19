@@ -1,0 +1,126 @@
+.catalog-section {
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 67px;
+    @media screen and (max-width: 769px) {
+      margin-top: 10px;
+           }
+    @media screen and (max-width: 426px) {
+     flex-direction: column-reverse;
+    }
+
+    &-blocks {
+      max-width: 674px;
+      padding-top: 101px;
+      display: flex;
+      flex-direction: column;
+      
+      @media screen and (max-width: 426px) {
+        padding-top: 50px;
+        align-items: center;
+             }
+
+      &-header {
+        font-size: 56px;
+        text-transform: uppercase;
+        @media screen and (max-width: 426px) {
+          font-size: 53px;
+          text-align: center;
+               }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    grid-gap: 50px;
+    margin-top: 35px;
+    @media screen and (max-width: 426px) {
+      grid-gap:15px;
+     }
+    
+
+    &-item {
+      font-size: 23px;
+      text-transform: uppercase;
+      position: relative;
+      @media screen and (max-width: 426px) {
+  font-size: 18px;
+       }
+
+      &:not(:first-child) {
+        &::before {
+          content: ' ';
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-image: url(../img/sprite/psevdo.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          top: 50%;
+          left: -36px;
+          transform: translateY(-50%)
+        }
+      }
+    }
+  }
+
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    
+    &-item1 {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background-color: var(--color-a);
+      color: var(--color-d);
+      width: 170px;
+      height: 50px;
+      border: solid 1px var(--color-a);
+      transition: all 1.3s;
+      font-family: var(--font-family);
+
+      &:hover {
+        background-color: var(--color-b);
+        color: var(--color-a);
+      }
+    }
+
+    &-item2 {
+      align-items: center;
+      font-family: var(--font-family);
+      justify-content: center;
+      display: flex;
+      background-color: inherit;
+      color: var(--color-a);
+      width: 144px;
+      height: 50px;
+      border: solid 1px var(--color-a);
+      transition: all 1.3s;
+
+      &:hover {
+        background-color: var(--color-b);
+      }
+    }
+  }
+
+
+  &__logo {
+    max-width: 562px;
+    height: auto;
+    @media screen and (max-width: 769px) {
+      padding-top: 21%;
+           }
+           @media screen and (max-width: 426px) {
+            padding-top: 10%;
+                 }
+  }
+}

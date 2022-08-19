@@ -1,0 +1,102 @@
+.articles-table {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 104px;
+    grid-gap: 100px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 768px) {
+       grid-gap:50px;
+    }
+    &__main {
+      border: solid 2px var(--color-a);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 53px 10px 34px;
+      position: relative;
+
+      &:nth-child(3n) {
+
+        &::before {
+          content: ' ';
+          position: absolute;
+          width: 240px;
+          height: 240px;
+          background-image: url(/img/sprite/logoART.svg);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          top: 50%;
+          right: -26.5%;
+          transform: translateY(-50%);
+          @media screen and (max-width: 1025px) {
+            opacity: 0;
+          }
+        }
+      }
+
+      &:nth-child(4n) {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-d);
+        font-size: 20px;
+        transition: 0.5s;
+
+        &:hover {
+          color: var(--color-a);
+          background-color: var(--color-c);
+        }
+      }
+      @media screen and (max-width: 768px) {
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      width: 42%;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: 768px) {
+        padding: 10px;
+      }
+        @media screen and (max-width: 426px) {
+            align-items: center;
+            text-align: center;
+          }
+      
+    }
+
+    &__title {
+      color: var(--color-e);
+      @media screen and (max-width: 426px) {
+        font-size: 13px;
+      }
+    }
+
+    &__text {
+      font-size: 24px;
+      @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 426px) {
+        font-size: 15px;
+      }
+    }
+
+    &__item {
+      width: 457px;
+      font-size: 16px;
+      @media screen and (max-width: 426px) {
+        font-size: 13px;
+      }
+    }
+
+  }

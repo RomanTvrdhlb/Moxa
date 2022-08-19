@@ -1,0 +1,70 @@
+
+  .awards-list {
+    display: grid;
+    grid-gap: 24px;
+    counter-reset: li;
+
+    
+    
+      &__item {
+        display: flex;
+        position: relative;
+        border: 2px solid var(--color-a);
+        height: 160px;
+        font-size: 18px;
+        padding-left: 106px;
+        align-items: center;
+        justify-content: space-between;
+
+        &::before {
+          content: counter(li) " ";
+          counter-increment: li;
+          text-align: center;
+          padding-top: 13px;
+          width: 48px;
+          height: 48px;
+          left: 34px;
+          background-color: var(--color-e);
+          position: absolute;
+          top: 34.5%;
+          @media screen and (max-width: 680px) {
+            left: 44%;
+            top: 9.5%;
+        }
+        @media screen and (max-width: 376px) {
+          left: 42%;
+      }
+      }
+
+        @media screen and (max-width: 680px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 0px;
+          padding-top: 53px;
+        }
+
+
+    &-main{
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: 680px) {
+        align-items: center;
+      }
+    }
+    &-text {
+      font-size: 23px;
+    }
+    &-title {
+      display: flex;
+      padding-right: 34px;
+      grid-gap: 16px;
+      font-size: 16px;
+
+      @media screen and (max-width: 680px) {
+        padding-right: 0px;
+    }
+    }
+  }
+
+}

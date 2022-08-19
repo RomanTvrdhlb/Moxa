@@ -1,0 +1,41 @@
+.main-top {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-style: normal;
+  line-height: 100%;
+  color: var(--color-a);
+  margin: 0 auto;
+  grid-gap: 29px;
+  margin: 120px 0px 60px 0px;
+  font-size: 18px;
+
+
+  &__item {
+    font-size: 46px;
+    @media screen and (max-width: 376px) {
+      font-size: 40px;
+    }
+    &::before {
+      content: ' ';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-image: url(/img/sprite/logo.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      right: 48%;
+      transform: translateY(-155%);
+      @media screen and (max-width: 680px) {
+        right: 45%;
+      }
+      @media screen and (max-width: 376px) {
+        right: 44%;
+      }
+    }
+  }
+}

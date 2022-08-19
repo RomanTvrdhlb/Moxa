@@ -1,0 +1,35 @@
+:root {
+  --body-bg: #F5F5F5;
+
+
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --font-family: "BaiJamjuree", sans-serif; // var(--font-family);
+
+  // text color
+  --color-a: #161513;  ; // var(--color-a);
+  --color-b:  #787878; // var(--color-b);
+  --color-c: #4b4d4f; // var(--color-c);
+  --color-d: #ffffff; // var(--color-d);
+  --color-e: #E94D35; // var(--color-e);
+  --color-f: #E6E3DE; // var(--color-f);
+  --color-m: #969186; // var(--color-m);
+  --color-g: #2c2c2caf; // var(--color-g);
+  --color-h: #F5F5F5; // var(--color-h);
+
+  --color-i: #3671D4; // var(--color-i);
+  --color-j: #132442; // var(--color-j);
+  --color-k: #182C4F; // var(--color-k);
+  --color-l: #FFAE35; // var(--color-l);
+
+  
+
+
+
+
+  --plus-bg: #A5340F; // var(--plus-bg);
+
+  --advantage-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50%), #A5340F;
+}
